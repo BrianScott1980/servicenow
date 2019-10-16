@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Exclude/include user preferences in workspace chrome.</description>
+        <name>ws_active_user_pref</name>
+        <page display_value="JPMC">31fd75ddbc6440107f44a6b92f52021c</page>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 13:52:36</sys_created_on>
+        <sys_id>fdfdf911bca440107f44a6b92f52020b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws_active_user_pref</sys_name>
+        <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
+        <sys_update_name>sys_ux_page_property_fdfdf911bca440107f44a6b92f52020b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 13:52:36</sys_updated_on>
+        <type>boolean</type>
+        <unique_name>x_snc_jpmc.ws_active_user_pref</unique_name>
+        <value>true</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=fdfdf911bca440107f44a6b92f52020b"/>
+</record_update>

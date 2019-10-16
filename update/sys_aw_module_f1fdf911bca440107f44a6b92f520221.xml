@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
+    <sys_aw_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <content display_value="Home Module Content">cafdf911bca440107f44a6b92f52022c</content>
+        <content_attrs/>
+        <content_component display_value="sn-workspace-home">5012e92bff222300294153bd6338f159</content_component>
+        <content_tag/>
+        <detail/>
+        <detail_attrs/>
+        <detail_component/>
+        <detail_tag/>
+        <hide_until_ready>false</hide_until_ready>
+        <icon>home-outline</icon>
+        <id>home</id>
+        <label>Home</label>
+        <order>0</order>
+        <roles/>
+        <sys_class_name>sys_aw_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 13:52:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f1fdf911bca440107f44a6b92f520221</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>home</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
+        <sys_policy/>
+        <sys_props/>
+        <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
+        <sys_update_name>sys_aw_module_f1fdf911bca440107f44a6b92f520221</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 13:52:36</sys_updated_on>
+        <toolbar_button display_value="Home Button">3dfdf911bca440107f44a6b92f520221</toolbar_button>
+        <type>full</type>
+        <workspace_config display_value="JPMC">31fd75ddbc6440107f44a6b92f52021b</workspace_config>
+    </sys_aw_module>
+    <sys_variable_value action="delete_multiple" query="document_key=f1fdf911bca440107f44a6b92f520221"/>
+</record_update>
