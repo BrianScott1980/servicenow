@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Wifi</name>
+        <order/>
+        <roles>x_snc_jpmc.wifi_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-17 08:48:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93f18ae1bc6c40107f44a6b92f52023d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Wifi</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
+        <sys_update_name>sys_ui_application_93f18ae1bc6c40107f44a6b92f52023d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-17 08:48:39</sys_updated_on>
+    </sys_ui_application>
+</record_update>

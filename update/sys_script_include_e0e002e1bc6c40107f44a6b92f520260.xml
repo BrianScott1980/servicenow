@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_jpmc.Wifi</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>WIFI Library</description>
+        <name>Wifi</name>
+        <script><![CDATA[var Wifi = Class.create();
+Wifi.prototype = {
+    initialize: function() {
+    },
+	getDevices: function() {
+		var device = new GlideRecord("x_snc_jpmc_wifi");
+		device.query();
+		var responseValues = [];
+		while(device.next()){
+			responseValues.push({
+				name: device.name,
+				mac: device.mac
+			});
+		}
+		return responseValues;
+	},
+    type: 'Wifi'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-17 08:47:22</sys_created_on>
+        <sys_id>e0e002e1bc6c40107f44a6b92f520260</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Wifi</sys_name>
+        <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
+        <sys_update_name>sys_script_include_e0e002e1bc6c40107f44a6b92f520260</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-17 08:57:28</sys_updated_on>
+    </sys_script_include>
+</record_update>
