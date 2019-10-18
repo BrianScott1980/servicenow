@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Weather" max_length="40" name="x_snc_jpmc_st_weather" type="collection">
+        <element label="City" max_length="1000" name="city" type="string"/>
+        <element display="true" label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Temperature" max_length="1000" name="temperature" type="string"/>
+    </element>
+</database>

@@ -3,7 +3,7 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>false</action_insert>
+        <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
@@ -11,14 +11,14 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>incident</collection>
+        <collection>x_snc_jpmc_ipaddressinfo</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>GIT Script</name>
+        <name> Populate IP Address City</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,28 +29,43 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-    gs.debug('Incident updated and logged BRANCH 1');
-    current.short_description = 'Updated from GIT script';
-    current.update();
+    try {
+        var r = new sn_ws.RESTMessageV2('x_snc_jpmc.IPInfo', 'Default GET');
+        r.setStringParameterNoEscape('ipaddress', current.ip_address);
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        var responseObj = JSON.parse(responseBody);
+		
+		
+		gs.info("Updated city to "+current.city+" for IP Address "+current.ip_address);
+		current.city = responseObj.city;
+		current.update();
+		gs.info("Completed city update");
+		
+    } catch (ex) {
+        gs.error(ex.message);
+    }
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-10-16 13:58:45</sys_created_on>
+        <sys_created_on>2019-10-18 11:52:30</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ca0fb551bca440107f44a6b92f5202f8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>GIT Script</sys_name>
+        <sys_id>c9f2bfb5bce480107f44a6b92f520242</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name> Populate IP Address City</sys_name>
         <sys_overrides/>
         <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
         <sys_policy/>
         <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
-        <sys_update_name>sys_script_ca0fb551bca440107f44a6b92f5202f8</sys_update_name>
+        <sys_update_name>sys_script_c9f2bfb5bce480107f44a6b92f520242</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-10-17 09:34:48</sys_updated_on>
+        <sys_updated_on>2019-10-18 11:59:26</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=ca0fb551bca440107f44a6b92f5202f8"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c9f2bfb5bce480107f44a6b92f520242"/>
 </record_update>

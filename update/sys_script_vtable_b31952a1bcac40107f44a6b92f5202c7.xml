@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>WeatherSubscriptionDefinition</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+	
+	var gr = new GlideRecord("sys_user");
+	gr.get(gs.getUserID());
+	var city=gr.location.city;
+	
+	gs.info("BS: Fetching weather for: "+city);
+	
+    var restMessage = new sn_ws.RESTMessageV2();
+    restMessage.setHttpMethod("get");
+    restMessage.setEndpoint("http://api.openweathermap.org/data/2.5/weather?APPID=3aef82988ec564051f6a2a5d64fb1cd9&q=" +encodeURIComponent(city));
+    restMessage.setRequestBody(JSON.stringify({}));
+    var response = restMessage.execute();
+    var responseBody = response.getBody();
+    var responseObj = JSON.parse(responseBody);
+
+    v_table.addRow({
+        sys_id: gs.generateGUID(),
+        city: responseObj.name,
+        temperature: responseObj.main.temp,
+        description: responseObj.weather[0].description
+    });
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-17 10:35:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b31952a1bcac40107f44a6b92f5202c7</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>WeatherSubscriptionDefinition</sys_name>
+        <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
+        <sys_update_name>sys_script_vtable_b31952a1bcac40107f44a6b92f5202c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-17 12:21:33</sys_updated_on>
+        <table>x_snc_jpmc_st_weather</table>
+    </sys_script_vtable>
+</record_update>

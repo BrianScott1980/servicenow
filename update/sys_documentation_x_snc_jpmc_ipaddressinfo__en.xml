@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="mac" label="MAC" language="en" table="x_snc_jpmc_wifi">
+    <sys_documentation element="" label="IPAddressInfo" language="en" table="x_snc_jpmc_ipaddressinfo">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>mac</element>
+            <element/>
             <help/>
             <hint/>
-            <label>MAC</label>
+            <label>IPAddressInfo</label>
             <language>en</language>
-            <name>x_snc_jpmc_wifi</name>
-            <plural>MACs</plural>
+            <name>x_snc_jpmc_ipaddressinfo</name>
+            <plural>IPAddressInfos</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-10-17 08:48:40</sys_created_on>
-            <sys_id>197c0e29bc6c40107f44a6b92f5202fb</sys_id>
+            <sys_created_on>2019-10-18 11:39:14</sys_created_on>
+            <sys_id>ff923bb5bce480107f44a6b92f520278</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>MAC</sys_name>
+            <sys_name>IPAddressInfo</sys_name>
             <sys_package display_value="JPMC" source="x_snc_jpmc">62bdf111bca440107f44a6b92f520209</sys_package>
             <sys_policy/>
             <sys_scope display_value="JPMC">62bdf111bca440107f44a6b92f520209</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_jpmc_wifi_mac_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_snc_jpmc_ipaddressinfo__en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-10-17 08:48:40</sys_updated_on>
+            <sys_updated_on>2019-10-18 11:39:14</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>
